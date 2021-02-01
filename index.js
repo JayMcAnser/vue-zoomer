@@ -2,4 +2,4 @@
 
 import zoom from './src/vue-zoomer';
 
-module.exports = zoom
+export const zoom;
