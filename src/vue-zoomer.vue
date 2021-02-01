@@ -86,6 +86,7 @@ export default {
       if (val !== 1) {
         this.$emit('update:zoomed', true)
         this.panLocked = false
+        this.$emit('update:end')
       }
     },
     resetTrigger: 'reset',
@@ -116,23 +117,20 @@ export default {
       this.translateX = 0
       this.translateY = 0
     },
-    zoomIn(scale = 2) {
-      this.$emit('update:start')
+    zoomIn(scale = 2) {   
       this.tryToScale(scale)
-      this.onInteractionEnd()
-      this.$emit('update:end')
+      this.onInteractionEnd()      
     },
     zoomOut(scale = 0.5) {
-      this.$emit('update:start')
       this.tryToScale(scale)
       this.onInteractionEnd()
-      this.$emit('update:end')
     },
     // Main Logic --------------------------------------------------------------
     // scale
     // Zoom the image with the point at the pointer(mouse or pinch center) pinned.
     // Simplify: This can be regard as vector pointer to old-image-center scaling.
     tryToScale (scaleDelta) {
+      this.$emit('update:start')
       let newScale = this.scale * scaleDelta
       if (this.zoomingElastic) {
         // damping
