@@ -14,8 +14,10 @@ will not be resize.
 
 ### v-zoomer&gt; Events
 
+* updated:zoomed - called when zoomed (true: scalled, false: not scaled)
 * update:start - called before any changes is applied
 * update:end - called when the zoom is finishe
+* swipe - (direction) direction = [left|right]
 
 ## contributor
 

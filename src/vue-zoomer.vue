@@ -117,12 +117,16 @@ export default {
       this.translateY = 0
     },
     zoomIn(scale = 2) {
+      this.$emit('update:start')
       this.tryToScale(scale)
       this.onInteractionEnd()
+      this.$emit('update:end')
     },
     zoomOut(scale = 0.5) {
+      this.$emit('update:start')
       this.tryToScale(scale)
       this.onInteractionEnd()
+      this.$emit('update:end')
     },
     // Main Logic --------------------------------------------------------------
     // scale
