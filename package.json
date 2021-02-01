@@ -17,8 +17,6 @@
     "image",
     "vue"
   ],
-  "repository": "git@github.com:jarvisniu/vue-zoomer.git",
-  "author": "Jarvis Niu <jarvisniu@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.6.0",
@@ -31,8 +29,5 @@
     "vue": "^2.6.7",
     "vue-hot-reload-api": "^2.3.3",
     "vue-template-compiler": "^2.6.7"
-  },
-  "files": [
-    "dist/**/*"
-  ]
+  }
 }
